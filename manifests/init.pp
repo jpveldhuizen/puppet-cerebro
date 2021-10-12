@@ -13,6 +13,7 @@ class cerebro (
   Optional[Stdlib::Unixpath] $java_home = $::cerebro::params::java_home,
   Optional[Hash] $basic_auth_settings   = $::cerebro::params::basic_auth_settings,
   Optional[Stdlib::IP::Address] $address = $::cerebro::params::address,
+  Optional[Stdlib::Port::User] $port = $::cerebro::params::port,
 ) inherits cerebro::params {
 
   if $manage_user {

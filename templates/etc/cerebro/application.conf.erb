@@ -1,5 +1,13 @@
 secret = "<%= @secret %>"
 basePath = "<%= @basepath %>"
+<% if !@address.nil? -%>
+
+http.address = "<%= #{@address} %>"
+<% end -%>
+<% if !@port.nil? -%>
+http.port = "<%= #{@port} %>"
+<% end -%>
+
 pidfile.path = "/var/run/cerebro/cerebro.pid"
 rest.history.size = 50
 data.path = "/var/cerebro/cerebro.db"

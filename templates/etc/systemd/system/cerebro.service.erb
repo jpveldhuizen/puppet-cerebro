@@ -1,8 +1,3 @@
-<% if !@address.nil? -%>
-  <%- bind_address = " -Dhttp.address=#{@address}" -%>
-<% else -%>
-  <%- bind_address = nil -%>
-<% end -%>
 [Unit]
 Description=Cerebro: Elasticsearch web admin tool
 Documentation=https://github.com/lmenezes/cerebro
@@ -13,7 +8,7 @@ User=<%= @user %>
 Group=<%= @group %>
 PIDFile=/var/run/cerebro/cerebro.pid
 EnvironmentFile=-<%= @sysconfig %>
-ExecStart=/opt/cerebro/bin/cerebro -Dconfig.file=/etc/cerebro/application.conf<%= bind_address %>
+ExecStart=/opt/cerebro/bin/cerebro -Dconfig.file=/etc/cerebro/application.conf
 ExecReload=/bin/kill -HUP $MAINPID
 SuccessExitStatus=143
 
