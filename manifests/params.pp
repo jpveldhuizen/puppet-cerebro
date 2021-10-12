@@ -7,6 +7,8 @@ class cerebro::params {
   $secret         = cache_data('cerebro_cache_data', 'cerebro_secret', random_password(32))
   $hosts          = []
   $basepath       = '/'
+  $proxy_server   = undef
+  $proxy_type     = undef
   $cerebro_user   = 'cerebro'
   $manage_user    = true
   $package_url    = undef

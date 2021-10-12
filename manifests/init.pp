@@ -14,6 +14,8 @@ class cerebro (
   Optional[Hash] $basic_auth_settings   = $::cerebro::params::basic_auth_settings,
   Optional[Stdlib::IP::Address] $address = $::cerebro::params::address,
   Optional[Stdlib::Port::User] $port = $::cerebro::params::port,
+  Optional[Stdlib::HTTPUrl,Stdlib::HTTPSUrl] $proxy_server = $::cerebro::params::proxy_server,
+  Optional[Enum['none','http','https','ftp']] $proxy_type = $::cerebro::params::proxy_type,
 ) inherits cerebro::params {
 
   if $manage_user {

@@ -1,10 +1,12 @@
 class cerebro::install (
-  $version     = $::cerebro::version,
-  $address     = $::cerebro::address,
-  $port        = $::cerebro::port,
-  $user        = $::cerebro::cerebro_user,
-  $package_url = $::cerebro::package_url,
-  $sysconfig   = $::cerebro::sysconfig,
+  $version      = $::cerebro::version,
+  $address      = $::cerebro::address,
+  $port         = $::cerebro::port,
+  $user         = $::cerebro::cerebro_user,
+  $package_url  = $::cerebro::package_url,
+  $sysconfig    = $::cerebro::sysconfig,
+  $proxy_server = $::cerebro::proxy_server,
+  $proxy_type   = $::cerebro::proxy_type,
 ) {
   $group = $user
   $real_package_url = pick($package_url, "https://github.com/lmenezes/cerebro/releases/download/v${version}/cerebro-${version}.tgz")
@@ -24,6 +26,8 @@ class cerebro::install (
     cleanup      => true,
     user         => $user,
     group        => $group,
+    proxy_server => $proxy_server,
+    proxy_type   => $proxy_type,
     require      => File["/opt/cerebro-${version}"],
   }
 
