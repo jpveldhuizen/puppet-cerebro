@@ -1,12 +1,12 @@
 {
-  "name": "yano3-cerebro",
-  "version": "0.2.1",
-  "author": "yano3",
+  "name": "jpveldhuizen-cerebro",
+  "version": "0.4.0",
+  "author": "jpveldhuizen",
   "summary": "Module for managing and configuring Cerebro",
   "license": "MIT",
-  "source": "https://github.com/yano3/puppet-cerebro",
-  "project_page": "https://github.com/yano3/puppet-cerebro",
-  "issues_url": "https://github.com/yano3/puppet-cerebro/issues",
+  "source": "https://github.com/jpveldhuizen/puppet-cerebro",
+  "project_page": "https://github.com/jpveldhuizen/puppet-cerebro",
+  "issues_url": "https://github.com/jpveldhuizen/puppet-cerebro/issues",
   "tags": [
     "elasticsearch",
     "cerebro"
@@ -14,19 +14,19 @@
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
-      "version_requirement": ">= 4.0.0 < 7.0.0"
+      "version_requirement": ">= 5.0.0 < 7.1.0"
     },
     {
       "name": "puppet/archive",
-      "version_requirement": ">= 1.0.0 < 5.0.0"
+      "version_requirement": ">= 3.0.0 < 6.0.0"
     },
     {
       "name": "puppet/extlib",
-      "version_requirement": ">= 0.10.4 < 5.0.0"
+      "version_requirement": ">= 5.0.0 < 6.0.0"
     },
     {
-      "name": "camptocamp/systemd",
-      "version_requirement": ">= 0.4.0 < 3.0.0"
+      "name": "puppet/systemd",
+      "version_requirement": ">= 3.5.0 < 5.0.0"
     }
   ],
   "operatingsystem_support": [
@@ -63,14 +63,14 @@
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
-        "16.04"
+        "20.04"
       ]
     }
   ],
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">=4.0.0 <6.0.0"
+      "version_requirement": ">=4.0.0 <8.0.0"
     }
   ],
   "data_provider": null
