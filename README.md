@@ -49,7 +49,8 @@ class { 'cerebro':
 - `java_opts`: Specify `JAVA_OPTS` variables.
 - `java_home`: Specify `JAVA_HOME` path.
 - `basic_auth_settings`: Specify basic authentication settings.
-- `address`: Specify IP address cerebro listeining on.
+- `address`: Specify IP address cerebro listening on.
+- `port`: Specify port (1024-49151) cerebro listening on, default = 9000.
 
 ## Limitations
 
