@@ -51,6 +51,9 @@ class { 'cerebro':
 - `basic_auth_settings`: Specify basic authentication settings.
 - `address`: Specify IP address cerebro listening on.
 - `port`: Specify port (1024-49151) cerebro listening on, default = 9000.
+- `proxy_server`: Full http(s) address with portnumber for the proxyserver to use, ex. https://proxy.local:8080.
+- `proxy_type`: type o prosyserver to use, can be one of "none", "http", "https" or "ftp".
+
 
 ## Limitations
 
