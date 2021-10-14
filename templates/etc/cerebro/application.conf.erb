@@ -1,11 +1,11 @@
 secret = "<%= @secret %>"
 basePath = "<%= @basepath %>"
-<% if !@address.nil? -%>
+<% if @address -%>
 
-http.address = <%= #{@address} %>
+http.address = <%= @address %>
 <% end -%>
-<% if !@port.nil? -%>
-http.port = <%= #{@port} %>
+<% if @port -%>
+http.port = <%= @port %>
 <% end -%>
 
 pidfile.path = "/var/run/cerebro/cerebro.pid"
