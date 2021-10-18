@@ -1,8 +1,8 @@
 {
   "name": "jpveldhuizen-cerebro",
-  "version": "0.4.7",
+  "version": "0.4.9",
   "author": "jpveldhuizen",
-  "summary": "Work in Progress! Module for managing and configuring Cerebro",
+  "summary": "Module for installing and managing Cerebro",
   "license": "MIT",
   "source": "https://github.com/jpveldhuizen/puppet-cerebro",
   "project_page": "https://github.com/jpveldhuizen/puppet-cerebro",
