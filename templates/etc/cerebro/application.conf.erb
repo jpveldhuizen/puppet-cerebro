@@ -15,11 +15,11 @@ auth: {
 <% if @ldap_auth_settings -%>
   type: ldap
   settings: {
-<% @ldap_auth_settings.each do [k,v] -%>
+<% @ldap_auth_settings.each do |k,v| -%>
     <%= k %> = "<%= v %>"
 <% end -%>
     group-search {
-<% @ldap_group_search_settings.each do [k,v] -%>
+<% @ldap_group_search_settings.each do |k,v| -%>
       <%= k %> = "<%= v %>"
 <% end -%>
     }
