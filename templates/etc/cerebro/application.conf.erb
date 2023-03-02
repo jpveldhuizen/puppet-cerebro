@@ -38,6 +38,12 @@ hosts = [
   {
     host = "<%= host['host'] %>"
     name = "<%= host['name'] %>"
+  <% if host['auth'] %>
+    auth = {
+      username = "<%= host['auth']['username'] %>",
+      password = "<%= host['auth']['password'] %>"
+    }
+  <% end %>
   },
 <% end -%>
 ]
