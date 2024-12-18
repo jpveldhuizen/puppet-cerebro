@@ -21,7 +21,7 @@ class cerebro::params {
   $basic_auth_settings        = undef
   $ldap_auth_settings         = undef
   $ldap_group_search_settings = undef
-  $sysconfig = $::osfamily ? {
+  $sysconfig = $facts['os']['family'] ? {
     'Debian' => '/etc/default/cerebro',
     default  => '/etc/sysconfig/cerebro',
   }

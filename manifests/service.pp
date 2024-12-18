@@ -2,7 +2,7 @@ class cerebro::service (
   $ensure = $::cerebro::service_ensure,
   $enable = $::cerebro::service_enable,
 ) {
-  if ($::operatingsystem == 'Amazon') {
+  if ($facts['os']['name'] == 'Amazon') {
     service { 'cerebro':
       ensure  => $ensure,
       enable  => $enable,
